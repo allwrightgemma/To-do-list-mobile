@@ -15,7 +15,7 @@ input:checked + p {
 
 .container {
 	padding: 10px;
-	margin: 0 auto;
+	margin: 10px auto;
 	max-width: 576px;
 	/* background colour */
 }
@@ -25,15 +25,15 @@ input:checked + p {
 }
 
 .add-item input[type='text'] {
-	padding: 0.5em;
 	display: block;
+	padding: 10px;
 	margin: 0 auto 40px;
 	background-color: #f5f5f5;
 	border-radius: 4px;
 	border: 2px solid #d9d9dc;
 	font-size: 18px;
 	box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.1);
-	width: 85%;
+
 	color: #020a12;
 }
 
@@ -41,7 +41,7 @@ input:checked + p {
 	display: flex;
 	align-items: center;
 	list-style: none;
-	padding: 0.5em;
+	padding-left: 15px;
 	margin: 0.75em auto;
 	background-color: #f5f5f5;
 	border-radius: 4px;
@@ -59,7 +59,7 @@ input:checked + p {
 	height: 1em;
 	font-size: 16px;
 	text-align: center;
-	display: none;
+	/* display: none; */
 	transition: all 200ms ease-in-out;
 	position: relative;
 	left: 300px;
@@ -67,6 +67,6 @@ input:checked + p {
     centering the X; */
 }
 
-.item:hover span {
+/* .item:hover span {
 	display: block;
-}
+} */
