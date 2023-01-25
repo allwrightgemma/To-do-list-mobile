@@ -8,14 +8,19 @@ const list = document.querySelector('.list');
 
 function addNewItem() {
 	const newItem = document.createElement('div');
-	const newCheckbox = document.createElement('input');
-	newCheckbox.setAttribute('type', 'checkbox');
-	const newText = document.createElement('p');
-	newText.innerText = itemInput.value;
-	newItem.appendChild(newCheckbox);
-	newItem.appendChild(newText);
+
+	newItem.innerHTML = `<div class="item">
+					<div class="item-text">
+						<input type="checkbox" />
+						<p>${itemInput.value}</p>
+					</div>
+					<div class="delete-icon">
+						<i class="fa-solid fa-x"></i>
+					</div>
+				</div>`;
+
 	list.appendChild(newItem);
-	newItem.classList.add('item');
+
 	itemInput.value = '';
 }
 
