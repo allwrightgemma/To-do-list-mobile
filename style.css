@@ -40,6 +40,7 @@ input:checked + p {
 
 .item {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	list-style: none;
 	padding-left: 15px;
@@ -51,23 +52,21 @@ input:checked + p {
 	color: #020a12;
 }
 
-.item span {
-	display: block;
-	border: 1px solid #c0c3c8;
-	color: #c0c3c8;
-	border-radius: 50%;
-	width: 1em;
-	height: 1em;
-	font-size: 16px;
-	text-align: center;
-	/* display: none; */
-	transition: all 200ms ease-in-out;
-	position: relative;
-	left: 300px;
-	/* responsive positioning on right of the box-sizing
-    centering the X; */
+.item-text {
+	display: flex;
 }
 
-/* .item:hover span {
-	display: block;
-} */
+i {
+	display: flex;
+	color: #c0c3c8;
+	border-radius: 50%;
+	font-size: 16px;
+	text-align: center;
+	margin-right: 25px;
+	visibility: hidden;
+	transition: all 200ms ease-in-out;
+}
+
+.item:hover i {
+	visibility: visible;
+}
