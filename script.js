@@ -1,10 +1,6 @@
-// Empty array and push each item into it
-// Collect data from input and push into array
-// Add styling
-// Delete from list - select index of the item and remove it - splice
-
 const itemInput = document.querySelector('#add-item');
 const list = document.querySelector('.list');
+const deleteIcon = document.querySelector('.delete-icon');
 
 function addNewItem() {
 	const newItem = document.createElement('div');
@@ -20,8 +16,12 @@ function addNewItem() {
 				</div>`;
 
 	list.appendChild(newItem);
-
 	itemInput.value = '';
+}
+
+function deleteItem() {
+	this.parentElement.remove();
+	console.log(this);
 }
 
 itemInput.addEventListener('keypress', (e) => {
@@ -29,3 +29,5 @@ itemInput.addEventListener('keypress', (e) => {
 		addNewItem();
 	}
 });
+
+deleteIcon.addEventListener('click', deleteItem);

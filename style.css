@@ -59,14 +59,13 @@ input:checked + p {
 i {
 	display: flex;
 	color: #c0c3c8;
-	border-radius: 50%;
 	font-size: 16px;
-	text-align: center;
 	margin-right: 25px;
 	visibility: hidden;
-	transition: all 200ms ease-in-out;
+	transition: all 150ms ease-in-out;
 }
 
 .item:hover i {
 	visibility: visible;
+	cursor: pointer;
 }
