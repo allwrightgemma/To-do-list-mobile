@@ -1,6 +1,7 @@
 const itemInput = document.querySelector('#add-item');
 const list = document.querySelector('.list');
 const deleteIcon = document.querySelector('.delete-icon');
+const item = document.querySelector('.item');
 
 function addNewItem() {
 	const newItem = document.createElement('div');
@@ -19,9 +20,10 @@ function addNewItem() {
 	itemInput.value = '';
 }
 
-function deleteItem() {
-	this.parentElement.remove();
-	console.log(this);
+function deleteItem(e) {
+	if (!e.target.matches('i')) return;
+	const item = e.target;
+	item.parentElement.parentElement.remove();
 }
 
 itemInput.addEventListener('keypress', (e) => {
@@ -30,4 +32,4 @@ itemInput.addEventListener('keypress', (e) => {
 	}
 });
 
-deleteIcon.addEventListener('click', deleteItem);
+list.addEventListener('click', deleteItem);
